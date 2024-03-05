@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5rvao45wry85"
-path="res://.godot/imported/idle.png-19741cd7cce758afbd6af207ec7ccd28.ctex"
+uid="uid://bqm5tcgbxy8fi"
+path="res://.godot/imported/Падение.png-2ee3e629720e07b628bca6192e15e3da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/idle.png"
-dest_files=["res://.godot/imported/idle.png-19741cd7cce758afbd6af207ec7ccd28.ctex"]
+source_file="res://assests/textures/Падение.png"
+dest_files=["res://.godot/imported/Падение.png-2ee3e629720e07b628bca6192e15e3da.ctex"]
 
 [params]
 

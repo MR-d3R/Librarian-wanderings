@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5rvao45wry85"
-path="res://.godot/imported/idle.png-19741cd7cce758afbd6af207ec7ccd28.ctex"
+uid="uid://bol5qcgmjmyrc"
+path="res://.godot/imported/Прыжок.png-8f09a5bbc7bd197e295f30672ae51c23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/idle.png"
-dest_files=["res://.godot/imported/idle.png-19741cd7cce758afbd6af207ec7ccd28.ctex"]
+source_file="res://assests/textures/Прыжок.png"
+dest_files=["res://.godot/imported/Прыжок.png-8f09a5bbc7bd197e295f30672ae51c23.ctex"]
 
 [params]
 

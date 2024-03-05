@@ -41,14 +41,16 @@ func _physics_process(delta):
 	update_animations(direction)
 	
 func update_animations(direction):
-	#if is_on_floor():
-	if direction == 0:
-		ap.play("idle")
+	if is_on_floor():
+		if direction == 0:
+			ap.play("idle")
+		else:
+			ap.play("walk")
 	else:
-		ap.play("walk")
-	print(direction)
-	#else:
-		#ap.play("idle")
+		if velocity.y > 0:
+			ap.play("fall")
+		else:
+			ap.play("jump")
 
 func switch_direction(direction):
 	sprite.flip_h = (direction == -1)
