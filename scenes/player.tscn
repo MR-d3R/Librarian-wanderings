@@ -130,7 +130,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 11.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -147,4 +147,4 @@ position = Vector2(3, -75)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(20, -75)
 sprite_frames = SubResource("SpriteFrames_5g7kv")
-animation = &"idle"
+animation = &"walk"

@@ -8,8 +8,6 @@ extends CharacterBody2D
 @export var gravity = 1000
 @export var MAX_VELOCITY = 1000
 
-#@onready var ap = $AnimationPlayer
-#@onready var sprite = $Sprite2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 
