@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dfgwbwjcvdar2"]
+[gd_scene load_steps=30 format=3 uid="uid://dfgwbwjcvdar2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wvsp8"]
 [ext_resource type="Texture2D" uid="uid://boey3e07dw2q" path="res://assests/textures/GG standartik1.png" id="2_llqw2"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bqqvmbh0kko7l" path="res://assests/textures/GG hodba2.png" id="12_6my5u"]
 [ext_resource type="Texture2D" uid="uid://srggb7ymu42x" path="res://assests/textures/GG hodba3.png" id="13_bsjeg"]
 [ext_resource type="Texture2D" uid="uid://do154sg3orax" path="res://assests/textures/GG hodba4.png" id="14_jfuu1"]
+[ext_resource type="Texture2D" uid="uid://8nedckun5drv" path="res://assests/textures/GG prijok1.png" id="15_2f10l"]
 [ext_resource type="Texture2D" uid="uid://bgmrwvi64sgm" path="res://assests/textures/GG hodba5.png" id="15_efgat"]
 [ext_resource type="Texture2D" uid="uid://cdpbp52sc6vwv" path="res://assests/textures/GG hodba6.png" id="16_q2q5i"]
 [ext_resource type="Texture2D" uid="uid://b3jujdeegi8tc" path="res://assests/textures/GG prijok2.png" id="16_vgb40"]
@@ -34,6 +35,9 @@ size = Vector2(44, 132)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_mad34")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_yjnfd")
 }, {
 "duration": 1.0,
@@ -44,14 +48,6 @@ animations = [{
 }],
 "loop": false,
 "name": &"fall",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_mad34")
-}],
-"loop": true,
-"name": &"falling",
 "speed": 5.0
 }, {
 "frames": [{
@@ -87,6 +83,9 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_2f10l")
+}, {
 "duration": 1.0,
 "texture": ExtResource("16_vgb40")
 }, {
@@ -135,7 +134,6 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_wvsp8")
-JUMP_VELOCITY = -600.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, -67)
@@ -147,4 +145,4 @@ position = Vector2(3, -75)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(20, -75)
 sprite_frames = SubResource("SpriteFrames_5g7kv")
-animation = &"idle"
+animation = &"fall"

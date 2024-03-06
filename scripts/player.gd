@@ -8,8 +8,9 @@ extends CharacterBody2D
 @export var gravity = 1000
 @export var MAX_VELOCITY = 1000
 
-@onready var ap = $AnimationPlayer
-@onready var sprite = $Sprite2D
+#@onready var ap = $AnimationPlayer
+#@onready var sprite = $Sprite2D
+@onready var animated_sprite = $AnimatedSprite2D
 
 
 func _physics_process(delta):
@@ -43,15 +44,18 @@ func _physics_process(delta):
 func update_animations(direction):
 	if is_on_floor():
 		if direction == 0:
-			ap.play("idle")
+			animated_sprite.play("idle")
 		else:
-			ap.play("walk")
+			animated_sprite.play("walk")
 	else:
 		if velocity.y > 0:
-			ap.play("fall")
+			animated_sprite.play("falling")
 		else:
-			ap.play("jump")
+			animated_sprite.play("jump")
 
 func switch_direction(direction):
-	sprite.flip_h = (direction == -1)
-	sprite.position.x = direction * 15
+	animated_sprite.flip_h = (direction == -1)
+	if direction == -1:
+		animated_sprite.position.x = -9
+	else:
+		animated_sprite.position.x = 20
