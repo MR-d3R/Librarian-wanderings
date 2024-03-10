@@ -26,7 +26,6 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	
-	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -57,3 +56,9 @@ func switch_direction(direction):
 		animated_sprite.position.x = -9
 	else:
 		animated_sprite.position.x = 20
+		
+func _unhandled_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+				if event.pressed:
+					animated_sprite.play("attack")

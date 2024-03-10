@@ -1,22 +1,35 @@
-[gd_scene load_steps=29 format=3 uid="uid://dfgwbwjcvdar2"]
+[gd_scene load_steps=42 format=3 uid="uid://dfgwbwjcvdar2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wvsp8"]
+[ext_resource type="Texture2D" uid="uid://dx44skc4g0645" path="res://assests/textures/GG Ataka1.png" id="2_5q615"]
 [ext_resource type="Texture2D" uid="uid://boey3e07dw2q" path="res://assests/textures/GG standartik1.png" id="2_llqw2"]
 [ext_resource type="Texture2D" uid="uid://dyppu8j3fcvlw" path="res://assests/textures/GG padenie2.png" id="2_mad34"]
+[ext_resource type="Texture2D" uid="uid://1c7o1dy76aap" path="res://assests/textures/GG Ataka2.png" id="3_cukck"]
 [ext_resource type="Texture2D" uid="uid://dth3vdli3l5dj" path="res://assests/textures/GG standartik2.png" id="3_h3vis"]
 [ext_resource type="Texture2D" uid="uid://cm6yl63l3amrc" path="res://assests/textures/GG padenie3.png" id="3_yjnfd"]
 [ext_resource type="Texture2D" uid="uid://dsxwjkkqm4mp8" path="res://assests/textures/GG standartik3.png" id="4_d2fcj"]
 [ext_resource type="Texture2D" uid="uid://dosd6vfg32jre" path="res://assests/textures/GG padenie4.png" id="4_d5xus"]
+[ext_resource type="Texture2D" uid="uid://dbxyh45jncaq8" path="res://assests/textures/GG Ataka3.png" id="4_kp6c8"]
+[ext_resource type="Texture2D" uid="uid://2u0xw3corgen" path="res://assests/textures/GG Ataka4.png" id="5_8ndds"]
 [ext_resource type="Texture2D" uid="uid://byatcxtmnfami" path="res://assests/textures/GG standartik4.png" id="5_8ssvc"]
 [ext_resource type="Texture2D" uid="uid://brpkbf58g7bxu" path="res://assests/textures/GG padenie1.png" id="5_46d2j"]
+[ext_resource type="Texture2D" uid="uid://dkk66xhpvrh08" path="res://assests/textures/GG Ataka5.png" id="6_2luaw"]
 [ext_resource type="Texture2D" uid="uid://bp3uu67d0xma6" path="res://assests/textures/GG standartik5.png" id="6_vmckc"]
 [ext_resource type="Texture2D" uid="uid://cx4hmg6ea0fgh" path="res://assests/textures/GG standartik6.png" id="7_5ccvh"]
+[ext_resource type="Texture2D" uid="uid://d0d0jc5hhgeai" path="res://assests/textures/GG Ataka6.png" id="7_j7qme"]
 [ext_resource type="Texture2D" uid="uid://c81n8jybq4snv" path="res://assests/textures/GG standartik7.png" id="8_c36vw"]
+[ext_resource type="Texture2D" uid="uid://dajgivqp0hpjp" path="res://assests/textures/GG Ataka7.png" id="8_ye8ox"]
 [ext_resource type="Texture2D" uid="uid://k36sfttpr1je" path="res://assests/textures/GG standartik8.png" id="9_f72j8"]
+[ext_resource type="Texture2D" uid="uid://sh4tlfy4tad0" path="res://assests/textures/GG Ataka8.png" id="9_o08rx"]
 [ext_resource type="Texture2D" uid="uid://bwrg4wjrjywim" path="res://assests/textures/GG standartik9.png" id="10_5l0dm"]
+[ext_resource type="Texture2D" uid="uid://cx5un4o540jxb" path="res://assests/textures/GG Ataka9.png" id="10_6wnv4"]
 [ext_resource type="Texture2D" uid="uid://dv0q10wxb3dyx" path="res://assests/textures/GG hodba1.png" id="11_2avhv"]
+[ext_resource type="Texture2D" uid="uid://cqsgtfkixjos6" path="res://assests/textures/GG Ataka10.png" id="11_jtuxf"]
 [ext_resource type="Texture2D" uid="uid://bqqvmbh0kko7l" path="res://assests/textures/GG hodba2.png" id="12_6my5u"]
+[ext_resource type="Texture2D" uid="uid://banowxlofpxjo" path="res://assests/textures/GG Ataka11.png" id="12_b0q8a"]
 [ext_resource type="Texture2D" uid="uid://srggb7ymu42x" path="res://assests/textures/GG hodba3.png" id="13_bsjeg"]
+[ext_resource type="Texture2D" uid="uid://d14hu0h5wb2xp" path="res://assests/textures/GG Ataka12.png" id="13_ci0la"]
+[ext_resource type="Texture2D" uid="uid://dvkcon3mawu30" path="res://assests/textures/GG Ataka13.png" id="14_27xg7"]
 [ext_resource type="Texture2D" uid="uid://do154sg3orax" path="res://assests/textures/GG hodba4.png" id="14_jfuu1"]
 [ext_resource type="Texture2D" uid="uid://bgmrwvi64sgm" path="res://assests/textures/GG hodba5.png" id="15_efgat"]
 [ext_resource type="Texture2D" uid="uid://cdpbp52sc6vwv" path="res://assests/textures/GG hodba6.png" id="16_q2q5i"]
@@ -32,6 +45,50 @@ size = Vector2(44, 132)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5g7kv"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5q615")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cukck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kp6c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8ndds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2luaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j7qme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ye8ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o08rx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6wnv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jtuxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b0q8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ci0la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_27xg7")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_yjnfd")
@@ -147,4 +204,4 @@ position = Vector2(3, -75)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(20, -75)
 sprite_frames = SubResource("SpriteFrames_5g7kv")
-animation = &"walk"
+animation = &"attack"
