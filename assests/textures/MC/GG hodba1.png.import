@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b82grcx68ubnc"
-path="res://.godot/imported/GG hodba7.png-a4e2cb1339f1e32ebac83e23bb2bd542.ctex"
+uid="uid://dv0q10wxb3dyx"
+path="res://.godot/imported/GG hodba1.png-dcbe3e467b4fa4f25b9d4f68cec4ec82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG hodba7.png"
-dest_files=["res://.godot/imported/GG hodba7.png-a4e2cb1339f1e32ebac83e23bb2bd542.ctex"]
+source_file="res://assests/textures/MC/GG hodba1.png"
+dest_files=["res://.godot/imported/GG hodba1.png-dcbe3e467b4fa4f25b9d4f68cec4ec82.ctex"]
 
 [params]
 

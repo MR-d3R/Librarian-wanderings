@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dosd6vfg32jre"
-path="res://.godot/imported/GG padenie4.png-55a60fefc4e5012335011527ff30b216.ctex"
+uid="uid://dth3vdli3l5dj"
+path="res://.godot/imported/GG standartik2.png-75d7478459475ffc1b681b0679b1138e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG padenie4.png"
-dest_files=["res://.godot/imported/GG padenie4.png-55a60fefc4e5012335011527ff30b216.ctex"]
+source_file="res://assests/textures/MC/GG standartik2.png"
+dest_files=["res://.godot/imported/GG standartik2.png-75d7478459475ffc1b681b0679b1138e.ctex"]
 
 [params]
 

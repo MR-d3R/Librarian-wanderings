@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4y7s4up2mbi0"]
+[gd_scene load_steps=7 format=3 uid="uid://c4y7s4up2mbi0"]
 
 [ext_resource type="PackedScene" uid="uid://dfgwbwjcvdar2" path="res://scenes/player.tscn" id="1_yqny1"]
+[ext_resource type="Texture2D" uid="uid://be8cpu5j40ab" path="res://assests/textures/Platforms/Земля куча1.png" id="2_tv6ow"]
+[ext_resource type="Texture2D" uid="uid://dqcvhsmtmbvm1" path="res://assests/textures/Platforms/Земля куча2.png" id="3_lgyfu"]
+[ext_resource type="Texture2D" uid="uid://d0shs1iongt23" path="res://assests/textures/Platforms/Земля куча3.png" id="4_nhcnn"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_7inal"]
 size = Vector2(1000, 50)
@@ -17,13 +20,46 @@ position = Vector2(565, 353)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
 modulate = Color(0.917647, 0.466667, 0.929412, 1)
-position = Vector2(545, 422)
+position = Vector2(136.141, 416.26)
+rotation = 3.14159
+scale = Vector2(0.177853, 1.23368)
 mesh = SubResource("QuadMesh_7inal")
+texture = ExtResource("2_tv6ow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
 visible = false
 position = Vector2(545.5, 421.25)
 shape = SubResource("RectangleShape2D_2chio")
+
+[node name="ЗемляКуча1" type="Sprite2D" parent="Platform"]
+position = Vector2(284, 417)
+texture = ExtResource("2_tv6ow")
+
+[node name="ЗемляКуча2" type="Sprite2D" parent="Platform"]
+position = Vector2(405.25, 418)
+scale = Vector2(1.02, 1)
+texture = ExtResource("3_lgyfu")
+
+[node name="ЗемляКуча3" type="Sprite2D" parent="Platform"]
+position = Vector2(528, 411)
+texture = ExtResource("4_nhcnn")
+
+[node name="ЗемляКуча4" type="Sprite2D" parent="Platform"]
+position = Vector2(651, 413)
+texture = ExtResource("2_tv6ow")
+
+[node name="ЗемляКуча5" type="Sprite2D" parent="Platform"]
+position = Vector2(774.25, 414)
+scale = Vector2(1.02, 1)
+texture = ExtResource("3_lgyfu")
+
+[node name="ЗемляКуча6" type="Sprite2D" parent="Platform"]
+position = Vector2(897, 412)
+texture = ExtResource("2_tv6ow")
+
+[node name="ЗемляКуча7" type="Sprite2D" parent="Platform"]
+position = Vector2(983, 416)
+texture = ExtResource("3_lgyfu")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
 position = Vector2(1015, -64)
@@ -34,7 +70,6 @@ position = Vector2(545, 422)
 mesh = SubResource("QuadMesh_7inal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-visible = false
 position = Vector2(545.5, 421.25)
 shape = SubResource("RectangleShape2D_2chio")
 
@@ -47,6 +82,5 @@ position = Vector2(545, 422)
 mesh = SubResource("QuadMesh_7inal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
-visible = false
 position = Vector2(545.5, 421.25)
 shape = SubResource("RectangleShape2D_2chio")

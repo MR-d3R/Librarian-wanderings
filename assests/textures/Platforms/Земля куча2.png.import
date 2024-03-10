@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyppu8j3fcvlw"
-path="res://.godot/imported/GG padenie2.png-0fa640605325f8b64090ad773f2fc194.ctex"
+uid="uid://dqcvhsmtmbvm1"
+path="res://.godot/imported/Земля куча2.png-5a4bee40a0f2f1c231596f7e765168ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG padenie2.png"
-dest_files=["res://.godot/imported/GG padenie2.png-0fa640605325f8b64090ad773f2fc194.ctex"]
+source_file="res://assests/textures/Platforms/Земля куча2.png"
+dest_files=["res://.godot/imported/Земля куча2.png-5a4bee40a0f2f1c231596f7e765168ab.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ybfojfkn7xr"
-path="res://.godot/imported/GG prijok3.png-afa3f5c8cdd012d5dc8cfa27b8f5b79d.ctex"
+uid="uid://be8cpu5j40ab"
+path="res://.godot/imported/Земля куча1.png-57ff283d47a4efbb1786bd59abef7f47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG prijok3.png"
-dest_files=["res://.godot/imported/GG prijok3.png-afa3f5c8cdd012d5dc8cfa27b8f5b79d.ctex"]
+source_file="res://assests/textures/Platforms/Земля куча1.png"
+dest_files=["res://.godot/imported/Земля куча1.png-57ff283d47a4efbb1786bd59abef7f47.ctex"]
 
 [params]
 
