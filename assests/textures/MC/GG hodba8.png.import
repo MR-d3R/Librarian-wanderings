@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp3uu67d0xma6"
-path="res://.godot/imported/GG standartik5.png-6611906d110a69e601fe37cfbb248a13.ctex"
+uid="uid://b6d7r5vacgxp"
+path="res://.godot/imported/GG hodba8.png-1cb3a1d4f8730e9c4f7943ec95315061.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG standartik5.png"
-dest_files=["res://.godot/imported/GG standartik5.png-6611906d110a69e601fe37cfbb248a13.ctex"]
+source_file="res://assests/textures/MC/GG hodba8.png"
+dest_files=["res://.godot/imported/GG hodba8.png-1cb3a1d4f8730e9c4f7943ec95315061.ctex"]
 
 [params]
 

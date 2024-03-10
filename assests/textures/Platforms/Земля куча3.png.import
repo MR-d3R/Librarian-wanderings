@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do154sg3orax"
-path="res://.godot/imported/GG hodba4.png-ece8d0e0f84e0f18f4af8dbe6c3dc74b.ctex"
+uid="uid://d0shs1iongt23"
+path="res://.godot/imported/Земля куча3.png-04c30563d506d7ef94588c31739aa52c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG hodba4.png"
-dest_files=["res://.godot/imported/GG hodba4.png-ece8d0e0f84e0f18f4af8dbe6c3dc74b.ctex"]
+source_file="res://assests/textures/Platforms/Земля куча3.png"
+dest_files=["res://.godot/imported/Земля куча3.png-04c30563d506d7ef94588c31739aa52c.ctex"]
 
 [params]
 

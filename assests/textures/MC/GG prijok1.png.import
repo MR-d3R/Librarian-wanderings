@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brpkbf58g7bxu"
-path="res://.godot/imported/GG padenie1.png-8c5e08f9baca83ddaef42dd95d4b987a.ctex"
+uid="uid://8nedckun5drv"
+path="res://.godot/imported/GG prijok1.png-9cf3fae5eae407225af46309935bf78c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG padenie1.png"
-dest_files=["res://.godot/imported/GG padenie1.png-8c5e08f9baca83ddaef42dd95d4b987a.ctex"]
+source_file="res://assests/textures/MC/GG prijok1.png"
+dest_files=["res://.godot/imported/GG prijok1.png-9cf3fae5eae407225af46309935bf78c.ctex"]
 
 [params]
 

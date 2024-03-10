@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6d7r5vacgxp"
-path="res://.godot/imported/GG hodba8.png-4a819f686314b069655d17cdbfa5ab06.ctex"
+uid="uid://b3jujdeegi8tc"
+path="res://.godot/imported/GG prijok2.png-3de0d367fbecce26543e2ca24ff2beb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG hodba8.png"
-dest_files=["res://.godot/imported/GG hodba8.png-4a819f686314b069655d17cdbfa5ab06.ctex"]
+source_file="res://assests/textures/MC/GG prijok2.png"
+dest_files=["res://.godot/imported/GG prijok2.png-3de0d367fbecce26543e2ca24ff2beb8.ctex"]
 
 [params]
 
