@@ -41,8 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://b5j1o4bm3xlup" path="res://assests/textures/MC/GG prijok4.png" id="18_vw4t6"]
 [ext_resource type="Texture2D" uid="uid://cvsoo483py4t8" path="res://assests/textures/MC/GG hodba9.png" id="19_tcvrb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4poe"]
-size = Vector2(44, 132)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tylmn"]
+radius = 19.0
+height = 136.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5g7kv"]
 animations = [{
@@ -197,16 +198,15 @@ JUMP_VELOCITY = -600.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, -67)
-shape = SubResource("RectangleShape2D_m4poe")
+shape = SubResource("CapsuleShape2D_tylmn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, -135)
 zoom = Vector2(1.1, 1.1)
 limit_smoothed = true
-position_smoothing_speed = 1.0
 script = ExtResource("2_k5dvd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(20, -75)
 sprite_frames = SubResource("SpriteFrames_5g7kv")
-animation = &"fall"
+animation = &"idle"

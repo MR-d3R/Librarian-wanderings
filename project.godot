@@ -20,8 +20,15 @@ window/canvas_textures/default_texture_filter=1
 
 [editor]
 
+movie_writer/movie_file="C:/Users/Someone/Downloads/Projects/record.avi"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[importer_defaults]
+
+animation_library={
+"animation/fps": 60.0
+}
 
 [rendering]
 
