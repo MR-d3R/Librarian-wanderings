@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqsgtfkixjos6"
-path="res://.godot/imported/GG Ataka10.png-96777b0b34baaf462a33c6e7b24a2254.ctex"
+path="res://.godot/imported/GG Ataka10.png-7d81d96075788673803d860995c9c2f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG Ataka10.png"
-dest_files=["res://.godot/imported/GG Ataka10.png-96777b0b34baaf462a33c6e7b24a2254.ctex"]
+source_file="res://assests/textures/MC/GG Ataka10.png"
+dest_files=["res://.godot/imported/GG Ataka10.png-7d81d96075788673803d860995c9c2f6.ctex"]
 
 [params]
 

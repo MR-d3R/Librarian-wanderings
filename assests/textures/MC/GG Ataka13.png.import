@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d14hu0h5wb2xp"
-path="res://.godot/imported/GG Ataka12.png-5258b5c62fb67bbd7ec2366fcf1ce879.ctex"
+uid="uid://dvkcon3mawu30"
+path="res://.godot/imported/GG Ataka13.png-9a503f6a079cc8c7bfd954e6ef500e87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG Ataka12.png"
-dest_files=["res://.godot/imported/GG Ataka12.png-5258b5c62fb67bbd7ec2366fcf1ce879.ctex"]
+source_file="res://assests/textures/MC/GG Ataka13.png"
+dest_files=["res://.godot/imported/GG Ataka13.png-9a503f6a079cc8c7bfd954e6ef500e87.ctex"]
 
 [params]
 
