@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4y7s4up2mbi0"]
+[gd_scene load_steps=10 format=3 uid="uid://c4y7s4up2mbi0"]
 
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_613gp"]
 [ext_resource type="PackedScene" uid="uid://dfgwbwjcvdar2" path="res://scenes/player.tscn" id="1_yqny1"]
 [ext_resource type="Texture2D" uid="uid://d062x1bv4xuvr" path="res://assests/textures/Background/0.png" id="5_thj2v"]
 [ext_resource type="Texture2D" uid="uid://bb5sccm73ax7u" path="res://assests/textures/Background/1.png" id="6_5081c"]
@@ -7,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://c5o5xxmg2bysi" path="res://assests/textures/Background/3.png" id="8_pvkn5"]
 [ext_resource type="PackedScene" uid="uid://du4va6kxvpldg" path="res://scenes/Enemies/ram.tscn" id="8_tttmp"]
 [ext_resource type="Texture2D" uid="uid://r6o3x657fplo" path="res://assests/textures/Background/4.png" id="9_tif16"]
-[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="10_sr200"]
+[ext_resource type="PackedScene" uid="uid://c5ylxd8382icg" path="res://scenes/tile_map.tscn" id="10_sr200"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_613gp")
 
 [node name="Player" parent="." instance=ExtResource("1_yqny1")]
 position = Vector2(2844, 948)
@@ -18,6 +20,7 @@ gravity = 2000
 MAX_VELOCITY = 2000
 
 [node name="Background" type="ParallaxBackground" parent="."]
+follow_viewport_scale = 2.93
 
 [node name="ParallaxLayer0" type="ParallaxLayer" parent="Background"]
 motion_scale = Vector2(0.1, 0.1)

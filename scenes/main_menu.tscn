@@ -1,0 +1,192 @@
+[gd_scene load_steps=32 format=3 uid="uid://dn2v26qy8mudf"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_dmuje"]
+[ext_resource type="Texture2D" uid="uid://c2e5ltuphrsjd" path="res://assests/textures/Background/Фон общий вид1.png" id="1_ta2y1"]
+[ext_resource type="Texture2D" uid="uid://byinwq8c0xquk" path="res://assests/textures/menu/Knopka igrat1.png" id="2_q4jl0"]
+[ext_resource type="Texture2D" uid="uid://0mribntqk3ss" path="res://assests/textures/menu/Knopka nastroyki1.png" id="2_tdbdi"]
+[ext_resource type="Texture2D" uid="uid://bqkib2xqg86w1" path="res://assests/textures/menu/Knopka nastroyki2.png" id="3_vx1k3"]
+[ext_resource type="Texture2D" uid="uid://7q5yw7ixaxsg" path="res://assests/textures/menu/Knopka igrat2.png" id="3_ydk3u"]
+[ext_resource type="Texture2D" uid="uid://btdv8rd5uvlhv" path="res://assests/textures/menu/Knopka igrat3.png" id="4_21ckx"]
+[ext_resource type="Texture2D" uid="uid://ci50xwvifntwp" path="res://assests/textures/menu/Knopka nastroyki11.png" id="4_s2pxl"]
+[ext_resource type="Texture2D" uid="uid://m5fjnv287fpo" path="res://assests/textures/menu/Knopka igrat4.png" id="5_0m5vv"]
+[ext_resource type="Texture2D" uid="uid://c4bbltumjs5ji" path="res://assests/textures/menu/Knopka nastroyki12.png" id="5_epy0y"]
+[ext_resource type="Texture2D" uid="uid://d31kihxse7wek" path="res://assests/textures/menu/Knopka igrat5.png" id="6_m7l0n"]
+[ext_resource type="Texture2D" uid="uid://8vkq8hlkex3d" path="res://assests/textures/menu/Knopka nastroyki3.png" id="6_saviu"]
+[ext_resource type="Texture2D" uid="uid://cjw3eq7a8qq5y" path="res://assests/textures/menu/Knopka nastroyki4.png" id="7_1h4ej"]
+[ext_resource type="Texture2D" uid="uid://dcg0e5ns6iyl5" path="res://assests/textures/menu/Knopka igrat6.png" id="7_j4y1x"]
+[ext_resource type="Texture2D" uid="uid://rbspmkqpbhnx" path="res://assests/textures/menu/Knopka igrat7.png" id="8_2a5l3"]
+[ext_resource type="Texture2D" uid="uid://w2bleniifk61" path="res://assests/textures/menu/Knopka nastroyki5.png" id="8_oahrh"]
+[ext_resource type="Texture2D" uid="uid://da7kww5r8o7bg" path="res://assests/textures/menu/Knopka nastroyki6.png" id="9_1i2ky"]
+[ext_resource type="Texture2D" uid="uid://2nwee21o6ww3" path="res://assests/textures/menu/Knopka nastroyki7.png" id="10_n1i5w"]
+[ext_resource type="Texture2D" uid="uid://dct1fnxf3x0i5" path="res://assests/textures/menu/Knopka nastroyki8.png" id="11_6hs5k"]
+[ext_resource type="Texture2D" uid="uid://baytxmn5724so" path="res://assests/textures/menu/Knopka nastroyki9.png" id="12_xi506"]
+[ext_resource type="Texture2D" uid="uid://d2ai5oq1dlpty" path="res://assests/textures/menu/Knopka nastroyki10.png" id="13_s4neh"]
+[ext_resource type="Texture2D" uid="uid://dpcgromhs8kre" path="res://assests/textures/menu/Knopka vihod1.png" id="21_p0b8n"]
+[ext_resource type="Texture2D" uid="uid://csdg5apqudua8" path="res://assests/textures/menu/Knopka vihod2.png" id="22_1onif"]
+[ext_resource type="Texture2D" uid="uid://c0jrh6h5l6qa8" path="res://assests/textures/menu/Knopka vihod3.png" id="23_3nmq4"]
+[ext_resource type="Texture2D" uid="uid://bl4mkqu855yt1" path="res://assests/textures/menu/Knopka vihod4.png" id="24_oitby"]
+[ext_resource type="Texture2D" uid="uid://bm0xq4dxhe38t" path="res://assests/textures/menu/Knopka vihod5.png" id="25_xca0y"]
+[ext_resource type="Texture2D" uid="uid://700sgl6ur1lm" path="res://assests/textures/menu/Knopka vihod6.png" id="26_t1tr3"]
+
+[sub_resource type="SystemFont" id="SystemFont_vlf1h"]
+font_names = PackedStringArray("Bookman Old Style")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fn8ms"]
+frames = 7
+one_shot = true
+frame_0/texture = ExtResource("2_q4jl0")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("3_ydk3u")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("4_21ckx")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("5_0m5vv")
+frame_3/duration = 0.1
+frame_4/texture = ExtResource("6_m7l0n")
+frame_4/duration = 0.1
+frame_5/texture = ExtResource("7_j4y1x")
+frame_5/duration = 0.1
+frame_6/texture = ExtResource("8_2a5l3")
+frame_6/duration = 0.1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_bdx83"]
+frames = 12
+one_shot = true
+frame_0/texture = ExtResource("2_tdbdi")
+frame_0/duration = 0.05
+frame_1/texture = ExtResource("3_vx1k3")
+frame_1/duration = 0.05
+frame_2/texture = ExtResource("6_saviu")
+frame_2/duration = 0.05
+frame_3/texture = ExtResource("7_1h4ej")
+frame_3/duration = 0.05
+frame_4/texture = ExtResource("8_oahrh")
+frame_4/duration = 0.05
+frame_5/texture = ExtResource("9_1i2ky")
+frame_5/duration = 0.05
+frame_6/texture = ExtResource("10_n1i5w")
+frame_6/duration = 0.05
+frame_7/texture = ExtResource("11_6hs5k")
+frame_7/duration = 0.05
+frame_8/texture = ExtResource("12_xi506")
+frame_8/duration = 0.05
+frame_9/texture = ExtResource("13_s4neh")
+frame_9/duration = 0.05
+frame_10/texture = ExtResource("4_s2pxl")
+frame_10/duration = 0.05
+frame_11/texture = ExtResource("5_epy0y")
+frame_11/duration = 0.05
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_oletn"]
+frames = 6
+one_shot = true
+frame_0/texture = ExtResource("21_p0b8n")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("22_1onif")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("23_3nmq4")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("24_oitby")
+frame_3/duration = 0.1
+frame_4/texture = ExtResource("25_xca0y")
+frame_4/duration = 0.1
+frame_5/texture = ExtResource("26_t1tr3")
+frame_5/duration = 0.1
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dmuje")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.643137, 0.643137, 0.643137, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -140.0
+offset_right = 640.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ta2y1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.756863, 0.494118, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = SubResource("SystemFont_vlf1h")
+theme_override_font_sizes/font_size = 64
+text = "LIBRARIAN'S WANDERINGS"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = SubResource("AnimatedTexture_fn8ms")
+flat = true
+
+[node name="settings_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = SubResource("AnimatedTexture_bdx83")
+flat = true
+
+[node name="exit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = SubResource("AnimatedTexture_oletn")
+flat = true
