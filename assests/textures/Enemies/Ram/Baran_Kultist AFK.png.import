@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0d0jc5hhgeai"
-path="res://.godot/imported/GG Ataka6.png-9d889bfe5ebe8ad3f7ba5327a25fde9f.ctex"
+uid="uid://cn4h7pwifjimp"
+path="res://.godot/imported/Baran_Kultist AFK.png-cb592ab2bb7dede8365c883feb502b33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/textures/GG Ataka6.png"
-dest_files=["res://.godot/imported/GG Ataka6.png-9d889bfe5ebe8ad3f7ba5327a25fde9f.ctex"]
+source_file="res://assests/textures/Enemies/Ram/Baran_Kultist AFK.png"
+dest_files=["res://.godot/imported/Baran_Kultist AFK.png-cb592ab2bb7dede8365c883feb502b33.ctex"]
 
 [params]
 

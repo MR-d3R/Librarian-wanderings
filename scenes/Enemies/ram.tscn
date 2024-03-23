@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://du4va6kxvpldg"]
+
+[ext_resource type="Script" path="res://scripts/EnemiesScripts/Ram.gd" id="1_memxy"]
+[ext_resource type="Texture2D" uid="uid://cn4h7pwifjimp" path="res://assests/textures/Enemies/Ram/Baran_Kultist AFK.png" id="2_1jndc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_820yx"]
+size = Vector2(32, 102)
+
+[node name="Ram" type="CharacterBody2D"]
+script = ExtResource("1_memxy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, -75)
+texture = ExtResource("2_1jndc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -51)
+shape = SubResource("RectangleShape2D_820yx")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-32, -119)
+target_position = Vector2(0, 117)
