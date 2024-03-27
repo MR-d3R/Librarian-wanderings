@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c5o5xxmg2bysi" path="res://assests/textures/Background/3.png" id="8_pvkn5"]
 [ext_resource type="PackedScene" uid="uid://du4va6kxvpldg" path="res://scenes/Enemies/ram.tscn" id="8_tttmp"]
 [ext_resource type="Texture2D" uid="uid://r6o3x657fplo" path="res://assests/textures/Background/4.png" id="9_tif16"]
-[ext_resource type="PackedScene" uid="uid://c5ylxd8382icg" path="res://scenes/tile_map.tscn" id="10_sr200"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="10_sr200"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_613gp")
@@ -67,12 +67,3 @@ layer_0/tile_data = PackedInt32Array(3670032, 327680, 1, 3604496, 262144, 1, 353
 
 [node name="Ram" parent="." instance=ExtResource("8_tttmp")]
 position = Vector2(2821, 1161)
-
-[node name="Ram2" parent="." instance=ExtResource("8_tttmp")]
-position = Vector2(2639, 1150)
-
-[node name="Ram3" parent="." instance=ExtResource("8_tttmp")]
-position = Vector2(2921, 1161)
-
-[node name="Ram4" parent="." instance=ExtResource("8_tttmp")]
-position = Vector2(2482, 1143)
