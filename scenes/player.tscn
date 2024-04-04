@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dfgwbwjcvdar2"]
+[gd_scene load_steps=32 format=3 uid="uid://dfgwbwjcvdar2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wvsp8"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_k5dvd"]
@@ -27,10 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://b6d7r5vacgxp" path="res://assests/textures/MC/GG hodba8.png" id="18_uptyf"]
 [ext_resource type="Texture2D" uid="uid://b5j1o4bm3xlup" path="res://assests/textures/MC/GG prijok4.png" id="18_vw4t6"]
 [ext_resource type="Texture2D" uid="uid://cvsoo483py4t8" path="res://assests/textures/MC/GG hodba9.png" id="19_tcvrb"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tylmn"]
-radius = 19.0
-height = 136.0
+[ext_resource type="PackedScene" uid="uid://clttclpvxugvi" path="res://scenes/overlap/hurt_box.tscn" id="28_4f63l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5g7kv"]
 animations = [{
@@ -179,15 +176,19 @@ animations = [{
 "speed": 11.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fiu77"]
+radius = 17.0
+height = 136.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0doy5"]
+radius = 17.0
+height = 136.0
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_wvsp8")
 JUMP_VELOCITY = -600.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, -67)
-shape = SubResource("CapsuleShape2D_tylmn")
-one_way_collision = true
-one_way_collision_margin = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, -135)
@@ -199,3 +200,18 @@ script = ExtResource("2_k5dvd")
 position = Vector2(20, -75)
 sprite_frames = SubResource("SpriteFrames_5g7kv")
 animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -68)
+shape = SubResource("CapsuleShape2D_fiu77")
+
+[node name="HurtBox" parent="." instance=ExtResource("28_4f63l")]
+light_mask = 2
+visibility_layer = 4
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+visibility_layer = 3
+position = Vector2(7, -68)
+shape = SubResource("CapsuleShape2D_0doy5")
+
+[editable path="HurtBox"]
