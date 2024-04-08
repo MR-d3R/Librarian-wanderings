@@ -191,7 +191,7 @@ script = ExtResource("1_wvsp8")
 JUMP_VELOCITY = -600.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, -135)
+position = Vector2(4, -71)
 zoom = Vector2(1.1, 1.1)
 limit_smoothed = true
 script = ExtResource("2_k5dvd")
