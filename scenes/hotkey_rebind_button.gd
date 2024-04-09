@@ -24,7 +24,7 @@ func set_action_name() -> void:
 			label.text = "Jump"
 
 func set_text_for_key() -> void:
-	var action_events=InputMap.action_get_events(action_name)
+	var action_events = InputMap.action_get_events(action_name)
 	var action_event = action_events[0]
 	var action_key_code = OS.get_keycode_string(action_event.physical_keycode)
 	

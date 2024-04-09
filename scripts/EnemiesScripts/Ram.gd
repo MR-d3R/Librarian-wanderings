@@ -37,8 +37,14 @@ func flip():
 	else:
 		SPEED = abs(SPEED) * -1
 
-
-func _on_hitbox_area_entered(hitbox):
-	var base_damage = hitbox.damage 
+func receive_damage(base_damage):
+	var actual_damage = base_damage
+	
 	self.hp -= base_damage
-	print(hitbox.get_parent().name + "'s hitbox touched " + name + "'s hurtbox and dealt " + str(base_damage))
+	
+	
+func _on_hitbox_area_entered(hitbox):
+	receive_damage(hitbox)
+	
+	if hitbox.is_in_group("Projectile"):
+		hitbox.destroy()

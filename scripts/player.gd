@@ -8,7 +8,8 @@ extends CharacterBody2D
 @export var MAX_VELOCITY = 1000
 
 @onready var ap = $AnimatedSprite2D
-
+@onready var FireBall = preload("res://scenes/Projectiles/fire_ball.tscn") as PackedScene
+@onready var attack_timer = $AttackTimer
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -32,6 +33,10 @@ func _physics_process(delta):
 	
 	if direction != 0:
 		switch_direction(direction)
+		
+	if Input.is_action_just_pressed("attack") and attack_timer.is_stopped():
+		var fireball_direction = self.global_position.direction_to(get_global_mouse_position())
+		fireball_attack(fireball_direction)
 
 	move_and_slide()
 	
@@ -56,8 +61,13 @@ func switch_direction(direction):
 	else:
 		ap.position.x = 20
 		
-func _unhandled_input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-				if event.pressed:
-					ap.play("attack")
+func fireball_attack(fireball_direction: Vector2): 
+	if FireBall:
+		var fireball = FireBall.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+		get_tree().current_scene.add_child(fireball)
+		fireball.global_position = self.global_position
+		
+		var fireball_rotation = fireball_direction.angle() 
+		fireball.rotation = fireball_rotation
+		
+		attack_timer.start()
