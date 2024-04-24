@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
-
+@export var HP = 10
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 @export var gravity = 1000
 @export var MAX_VELOCITY = 1000
@@ -55,11 +55,10 @@ func update_animations(direction):
 			ap.play("jump")
 
 func switch_direction(direction):
-	ap.flip_h = (direction == -1)
 	if direction == -1:
-		ap.position.x = -9
+		transform.x.x = -1
 	else:
-		ap.position.x = 20
+		transform.x.x = 1
 		
 func fireball_attack(fireball_direction: Vector2): 
 	if FireBall:
