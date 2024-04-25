@@ -6,6 +6,7 @@ var player
 var direction
 var max_hp = 100
 var hp = max_hp
+var facin_right = true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -51,10 +52,6 @@ func receive_damage(base_damage):
 	
 func attack():
 	pass
-func _on_hitbox_area_entered(hitbox):
-	var base_damage = hitbox.damage 
-	self.hp -= base_damage
-	
 	
 func _on_hitbox_area_entered(hitbox):
 	receive_damage(hitbox)
