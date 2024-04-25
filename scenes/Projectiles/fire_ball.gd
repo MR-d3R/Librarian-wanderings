@@ -1,10 +1,12 @@
 extends "res://Hitbox.gd"
 
 @export var speed = 600
+@onready var ap = $AnimatedSprite2D
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
 	var direction = Vector2.RIGHT.rotated(rotation) 
 	global_position += speed * direction * delta
+	ap.play("fly")
 
 func destroy():
 	queue_free()

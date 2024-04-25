@@ -14,7 +14,7 @@
 script = ExtResource("1_613gp")
 
 [node name="Player" parent="." instance=ExtResource("1_yqny1")]
-position = Vector2(1777, 672)
+position = Vector2(1283, -1861)
 JUMP_VELOCITY = -1000.0
 gravity = 2000
 MAX_VELOCITY = 2000
