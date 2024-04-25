@@ -255,9 +255,11 @@ animations = [{
 }]
 
 [node name="FireBall" groups=["Projectile"] instance=ExtResource("1_q5mpa")]
+modulate = Color(1, 1, 1, 1)
 collision_layer = 8
 collision_mask = 5
 script = ExtResource("2_ktxma")
+speed = 650
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(5, 0)

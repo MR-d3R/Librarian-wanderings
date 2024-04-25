@@ -36,7 +36,7 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("attack") and attack_timer.is_stopped():
 		var fireball_direction = self.global_position.direction_to(get_global_mouse_position())
-		fireball_attack(fireball_direction)
+		fireball_attack(fireball_direction, velocity.x)
 
 	move_and_slide()
 	
@@ -60,7 +60,7 @@ func switch_direction(direction):
 	else:
 		transform.x.x = 1
 		
-func fireball_attack(fireball_direction: Vector2): 
+func fireball_attack(fireball_direction: Vector2, xvelocity): 
 	if FireBall:
 		var fireball = FireBall.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
 		get_tree().current_scene.add_child(fireball)

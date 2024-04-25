@@ -185,29 +185,29 @@ radius = 17.0
 height = 136.0
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(0, 69)
 collision_layer = 2
 script = ExtResource("1_wvsp8")
 JUMP_VELOCITY = -600.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(4, -71)
+position = Vector2(4, 0)
 zoom = Vector2(1.1, 1.1)
 limit_smoothed = true
 script = ExtResource("2_k5dvd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(20, -75)
+position = Vector2(20, 0)
 sprite_frames = SubResource("SpriteFrames_5g7kv")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7, -68)
+position = Vector2(7, 7)
 shape = SubResource("CapsuleShape2D_fiu77")
 
 [node name="HurtBox" parent="." instance=ExtResource("28_4f63l")]
 light_mask = 2
 visibility_layer = 4
+position = Vector2(0, 75)
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 visibility_layer = 3
