@@ -20,6 +20,7 @@ height = 110.0
 [node name="Ram" type="CharacterBody2D"]
 position = Vector2(14, -3)
 collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_memxy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

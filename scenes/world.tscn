@@ -14,7 +14,7 @@
 script = ExtResource("1_613gp")
 
 [node name="Player" parent="." instance=ExtResource("1_yqny1")]
-position = Vector2(1283, -1861)
+position = Vector2(1619, 235)
 JUMP_VELOCITY = -1000.0
 gravity = 2000
 MAX_VELOCITY = 2000
@@ -67,3 +67,12 @@ layer_0/tile_data = PackedInt32Array(3670032, 327680, 1, 3604496, 262144, 1, 353
 
 [node name="Ram" parent="." instance=ExtResource("8_tttmp")]
 position = Vector2(2821, 1161)
+
+[node name="Ram2" parent="." instance=ExtResource("8_tttmp")]
+position = Vector2(2578, 1114)
+
+[node name="Ram3" parent="." instance=ExtResource("8_tttmp")]
+position = Vector2(2446, 1097)
+
+[node name="Ram4" parent="." instance=ExtResource("8_tttmp")]
+position = Vector2(2417, 1148)
