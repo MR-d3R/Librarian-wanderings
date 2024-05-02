@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://du4va6kxvpldg"]
+[gd_scene load_steps=9 format=3 uid="uid://du4va6kxvpldg"]
 
 [ext_resource type="Script" path="res://scripts/EnemiesScripts/Ram.gd" id="1_memxy"]
 [ext_resource type="Texture2D" uid="uid://cn4h7pwifjimp" path="res://assests/textures/Enemies/Ram/Baran_Kultist AFK.png" id="2_1jndc"]
@@ -17,6 +17,9 @@ height = 108.0
 radius = 22.0
 height = 110.0
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_23go0"]
+a = Vector2(0, 111)
+
 [node name="Ram" type="CharacterBody2D"]
 position = Vector2(14, -3)
 collision_layer = 4
@@ -24,14 +27,15 @@ collision_mask = 5
 script = ExtResource("1_memxy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-3, -75)
+position = Vector2(-19, -73)
 texture = ExtResource("2_1jndc")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-32, -170)
-target_position = Vector2(1, 168)
+position = Vector2(-30, -28)
+target_position = Vector2(0, 30)
 
 [node name="HurtBox" parent="." instance=ExtResource("3_y65jl")]
+position = Vector2(-16, 0)
 collision_layer = 4
 collision_mask = 8
 
@@ -42,6 +46,7 @@ position = Vector2(14, -55)
 shape = SubResource("CapsuleShape2D_p3hbb")
 
 [node name="Hitbox" parent="." instance=ExtResource("3_1l2hn")]
+position = Vector2(-18, 0)
 collision_layer = 4
 collision_mask = 2
 
@@ -52,8 +57,14 @@ position = Vector2(14, -55)
 shape = SubResource("CapsuleShape2D_hu6i4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, -55)
+position = Vector2(-2, -55)
 shape = SubResource("CapsuleShape2D_0isaq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-30, -116)
+shape = SubResource("SegmentShape2D_23go0")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 

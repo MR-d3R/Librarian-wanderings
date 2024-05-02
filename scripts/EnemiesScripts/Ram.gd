@@ -3,9 +3,9 @@ extends CharacterBody2D
 @export var SPEED = 100.0
 @export var MAX_HP = 100
 #@export var JUMP_VELOCITY = -400.0
-var dir_memory = -1
+var line_of_sight = false
 var player
-var direction
+var direction = 1
 var max_hp = 100
 var hp = max_hp
 var facin_right = true
@@ -15,15 +15,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var collision =  $Hitbox/CollisionShape2D
 
 func _physics_process(delta):
-	# Add the gravity.
 	get_direction()
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
-		velocity.x += SPEED * direction
+		velocity.x = SPEED * direction
 	flip()
-	if direction == 0:
-		attack()
 	move_and_slide()
 	
 func get_direction():
@@ -31,12 +28,10 @@ func get_direction():
 	var player_pos = player.get_node("CollisionShape2D").global_position.x
 	var enemy_pos = collision.global_position.x
 	var flip_range = 0
-	if player_pos + flip_range < enemy_pos:
+	if player_pos + flip_range < enemy_pos and line_of_sight == true or line_of_sight == false and direction == 1 and $Area2D.has_overlapping_bodies():
 		direction = -1
-	elif player_pos - flip_range > enemy_pos:
+	elif player_pos - flip_range > enemy_pos and line_of_sight == true or line_of_sight == false and direction == -1 and $Area2D.has_overlapping_bodies():
 		direction = 1
-	else:
-		direction = 0
 
 func flip():
 	if direction == 1:
