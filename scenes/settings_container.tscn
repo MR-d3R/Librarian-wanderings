@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1rpq15a4mcki"]
+[gd_scene load_steps=5 format=3 uid="uid://b1rpq15a4mcki"]
 
 [ext_resource type="PackedScene" uid="uid://h4b3v3cewtui" path="res://scenes/hotkey_rebind_button.tscn" id="1_f6xy2"]
+[ext_resource type="Script" path="res://scenes/script_to_back.gd" id="2_wd6f8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bf4k2"]
 
@@ -63,3 +64,13 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_4t25c")
+
+[node name="button_to_back" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back
+"
+script = ExtResource("2_wd6f8")
+
+[connection signal="pressed" from="button_to_back" to="button_to_back" method="_on_pressed"]
