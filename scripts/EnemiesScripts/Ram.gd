@@ -37,7 +37,7 @@ func get_direction():
 		direction = -1
 	elif player_pos > enemy_pos + flip_range and line_of_sight == true or line_of_sight == false and direction == -1 and $Area2D.has_overlapping_bodies():
 		direction = 1
-	else:
+	elif player_pos <= enemy_pos + flip_range and player_pos >= enemy_pos - flip_range and line_of_sight:
 		direction = 0
 
 func flip():
