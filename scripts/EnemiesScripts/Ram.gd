@@ -30,11 +30,13 @@ func get_direction():
 	player = get_parent().get_node("Player")
 	var player_pos = player.get_node("CollisionShape2D").global_position.x
 	var enemy_pos = collision.global_position.x
-	var flip_range = 0
+	var flip_range = 100
 	if player_pos < enemy_pos - flip_range and line_of_sight == true or line_of_sight == false and direction == 1 and $Area2D.has_overlapping_bodies():
 		direction = -1
 	elif player_pos > enemy_pos + flip_range and line_of_sight == true or line_of_sight == false and direction == -1 and $Area2D.has_overlapping_bodies():
 		direction = 1
+	else:
+		direction = 0
 
 func flip():
 	if direction == 1:
