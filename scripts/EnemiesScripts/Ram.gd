@@ -8,9 +8,6 @@ var hp = MAX_HP
 var facin_right = true
 var player
 var direction = 1
-var max_hp = 100
-var hp = max_hp
-var facin_right = true
 var knockback_strength = 64
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -51,7 +48,6 @@ func lineofsight():
 	los.look_at(player.global_position)
 	if los.get_collider() == player and los.get_collider() != Environment:
 		line_of_sight = true
-		print("true")
 	else:
 		line_of_sight = false
 		
