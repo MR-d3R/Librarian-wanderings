@@ -48,6 +48,8 @@ shape = SubResource("CapsuleShape2D_p3hbb")
 position = Vector2(-18, 0)
 collision_layer = 4
 collision_mask = 2
+monitoring = true
+monitorable = false
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 light_mask = 4
@@ -65,11 +67,16 @@ shape = SubResource("CapsuleShape2D_0isaq")
 position = Vector2(-30, -116)
 shape = SubResource("SegmentShape2D_23go0")
 
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.664
+one_shot = true
+
 [node name="LineOfSight" type="RayCast2D" parent="."]
 position = Vector2(-8, -88)
 target_position = Vector2(500, 0)
 collision_mask = 3
 
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 
 [editable path="HurtBox"]

@@ -6,6 +6,10 @@ extends "res://Hitbox.gd"
 func _physics_process(delta):
 	var direction = Vector2.RIGHT.rotated(rotation) 
 	global_position += speed * direction * delta
+	#var collision = get.slide.collision(0)
+
+	#if collision != null && collision.collider is TileMap:
+		#queue_free()
 	ap.play("fly")
 
 func destroy():
@@ -30,3 +34,4 @@ func _on_body_entered(body):
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
+
