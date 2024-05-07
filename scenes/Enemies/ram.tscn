@@ -21,7 +21,6 @@ height = 110.0
 a = Vector2(0, 111)
 
 [node name="Ram" type="CharacterBody2D"]
-position = Vector2(14, -3)
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_memxy")
@@ -30,7 +29,7 @@ script = ExtResource("1_memxy")
 position = Vector2(-19, -73)
 texture = ExtResource("2_1jndc")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="RayCast2Dfor_floor" type="RayCast2D" parent="."]
 position = Vector2(-30, -28)
 target_position = Vector2(0, 30)
 
@@ -73,6 +72,11 @@ wait_time = 0.664
 one_shot = true
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[node name="LineOfSight" type="RayCast2D" parent="."]
+position = Vector2(-8, -88)
+target_position = Vector2(500, 0)
+collision_mask = 3
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 
 [editable path="HurtBox"]
