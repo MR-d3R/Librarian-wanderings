@@ -52,7 +52,7 @@ func update_animations(direction):
 		if velocity.y > 0:
 			ap.play("falling")
 		else:
-			ap.play("jump")
+			ap.play("jump_old")
 
 func switch_direction(direction):
 	if direction == -1:
