@@ -1,24 +1,21 @@
 extends Control
 
-@export var world : World
+@export var game_manager : GameManager
 
 func _ready():
+	hide()
+	game_manager.connect("toggle_game_paused", _on_game_toggle_is_paused)
+
+func _process(delta):
 	pass
-	#hide()
-	#world.connect("toggle_game_paused", _on_game_paused)
 
-
-
-func _on_game_paused(is_paused : bool):
-	if(is_paused):
+func _on_game_toggle_is_paused(game_paused: bool):
+	if game_paused:
 		show()
 	else:
 		hide()
 
 
-func _on_resume_button_pressed():
-	world.game_paused = false
 
-
-func _on_exit_to_menu_button_pressed():
-	get_tree().change_scene("res://scenes/main_menu.tscn")
+#func _on_exit_button_clicked():
+	#get_tree().change_scene("res://scenes/main_menu.tscn")

@@ -5,7 +5,7 @@ extends Control
 @onready var settings_button = $MarginContainer/HBoxContainer/VBoxContainer/settings_button as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/exit_button as Button
 
-@export var start_level = preload("res://scenes/world.tscn") as PackedScene
+@export var start_level = preload("res://scenes/game.tscn") as PackedScene
 @export var settings_menu = preload("res://scenes/settings_container.tscn") as PackedScene
 
 var arrow = load("res://assests/textures/Cursor Default.png")
