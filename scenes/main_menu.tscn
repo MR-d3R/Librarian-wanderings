@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dn2v26qy8mudf"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_dmuje"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_dmuje"]
 [ext_resource type="Texture2D" uid="uid://c021qicdsvbf3" path="res://assests/textures/menu/main menu bg.png" id="2_4xuw0"]
 [ext_resource type="Texture2D" uid="uid://byinwq8c0xquk" path="res://assests/textures/menu/Knopka igrat1.png" id="2_q4jl0"]
 [ext_resource type="Texture2D" uid="uid://0mribntqk3ss" path="res://assests/textures/menu/Knopka nastroyki1.png" id="2_tdbdi"]

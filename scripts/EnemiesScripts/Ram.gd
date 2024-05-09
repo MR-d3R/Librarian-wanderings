@@ -1,7 +1,7 @@
 extends CharacterBody2D
-
 @export var SPEED = 150
 @export var MAX_HP = 100
+@export var DAMAGE = 1
 var hp = MAX_HP
 
 var facin_right = true
@@ -26,6 +26,7 @@ func _physics_process(delta):
 	else:
 		velocity = SPEED * direction - knockback * knockback_strength
 	flip()
+	attack()
 	move_and_slide()
 	knockback = lerp(knockback, Vector2.ZERO, 0.1)
 	
@@ -40,7 +41,10 @@ func get_direction():
 		direction = Vector2.RIGHT
 	elif player_pos <= enemy_pos + flip_range and player_pos >= enemy_pos - flip_range and line_of_sight:
 		direction = Vector2.ZERO
-
+		
+func attack():
+	if $AttackDetector.has_overlapping_bodies():
+		player.hp-=DAMAGE
 func flip():
 	if direction == Vector2.RIGHT:
 		transform.x.x = -1
@@ -56,23 +60,6 @@ func lineofsight():
 		
 func receive_damage(base_damage):
 	var actual_damage = base_damage
-	
-func attack():
-	pass
-	#
-#func _on_hitbox_area_entered(hitbox):
-	#var base_damage = hitbox.damage 
-	#self.hp -= base_damage
-	#
-	
-#func _on_hitbox_area_entered(hitbox):
-	#receive_damage(hitbox)
-	#var hit_direction = global_position.direction_to(collision)
-	#velocity -= hit_direction * knockback_strength
-	#
-	#if hitbox.is_in_group("Projectile"):
-		#hitbox.destroy()
-
 
 func _on_hurt_box_area_entered(area):
 	receive_damage(area)

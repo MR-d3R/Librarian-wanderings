@@ -8,7 +8,7 @@ extends Control
 @export var start_level = preload("res://scenes/world.tscn") as PackedScene
 @export var settings_menu = preload("res://scenes/settings_container.tscn") as PackedScene
 
-var arrow = load("res://assests/textures/Cursor Default.png")
+var arrow = load("res://assests/textures/Cursor/Cursor Default.png")
 
 func _ready():
 	Input.set_custom_mouse_cursor(arrow)

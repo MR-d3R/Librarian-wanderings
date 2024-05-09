@@ -1,4 +1,4 @@
-extends "res://Hitbox.gd"
+extends "res://scripts/Hitbox.gd"
 
 @export var speed = 600
 @onready var ap = $AnimatedSprite2D

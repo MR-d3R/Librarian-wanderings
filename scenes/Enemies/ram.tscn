@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://du4va6kxvpldg"]
+[gd_scene load_steps=10 format=3 uid="uid://du4va6kxvpldg"]
 
 [ext_resource type="Script" path="res://scripts/EnemiesScripts/Ram.gd" id="1_memxy"]
 [ext_resource type="Texture2D" uid="uid://cn4h7pwifjimp" path="res://assests/textures/Enemies/Ram/Baran_Kultist AFK.png" id="2_1jndc"]
@@ -19,6 +19,9 @@ height = 110.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_23go0"]
 a = Vector2(0, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dq4uu"]
+size = Vector2(54, 20)
 
 [node name="Ram" type="CharacterBody2D"]
 collision_layer = 4
@@ -75,6 +78,15 @@ one_shot = true
 position = Vector2(-8, -88)
 target_position = Vector2(500, 0)
 collision_mask = 3
+
+[node name="AttackDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetector"]
+position = Vector2(-42, -58)
+shape = SubResource("RectangleShape2D_dq4uu")
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

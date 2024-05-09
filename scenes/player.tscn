@@ -1,7 +1,7 @@
 [gd_scene load_steps=512 format=3 uid="uid://dfgwbwjcvdar2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wvsp8"]
-[ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_k5dvd"]
+[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_fd7d7"]
 [ext_resource type="Texture2D" uid="uid://boey3e07dw2q" path="res://assests/textures/MC/GG standartik1.png" id="2_llqw2"]
 [ext_resource type="Texture2D" uid="uid://dyppu8j3fcvlw" path="res://assests/textures/MC/GG padenie2.png" id="2_mad34"]
 [ext_resource type="Texture2D" uid="uid://dth3vdli3l5dj" path="res://assests/textures/MC/GG standartik2.png" id="3_h3vis"]
@@ -2123,7 +2123,7 @@ JUMP_VELOCITY = -600.0
 position = Vector2(4, 0)
 zoom = Vector2(1.1, 1.1)
 limit_smoothed = true
-script = ExtResource("2_k5dvd")
+script = ExtResource("2_fd7d7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(6, 2)

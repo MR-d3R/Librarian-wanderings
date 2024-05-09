@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
-@export var HP = 10
+@export var MAX_HP = 10
+var hp = MAX_HP
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 @export var gravity = 1000
 @export var MAX_VELOCITY = 1000
@@ -13,6 +14,7 @@ extends CharacterBody2D
 
 func _physics_process(delta):
 	# Add the gravity.
+	print(hp)
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		if velocity.y > MAX_VELOCITY:
