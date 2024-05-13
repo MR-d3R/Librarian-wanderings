@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dkedmkjhf4er8"]
+
+[ext_resource type="Texture2D" uid="uid://kvupwcarj4m" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka1.png" id="1_54mqs"]
+[ext_resource type="Texture2D" uid="uid://d2fqcpaerfsll" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka2.png" id="2_x3dke"]
+[ext_resource type="Texture2D" uid="uid://towqssc4w1r1" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka3.png" id="3_qdlbo"]
+[ext_resource type="Texture2D" uid="uid://db7256sru143k" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka4.png" id="4_6cyxj"]
+[ext_resource type="Texture2D" uid="uid://bafgl2bat6d7m" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka5.png" id="5_ulllb"]
+[ext_resource type="Texture2D" uid="uid://cipr614i7dq5g" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka6.png" id="6_t7d3u"]
+[ext_resource type="Texture2D" uid="uid://2xpyi1iekyb" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka7.png" id="7_vbc7i"]
+[ext_resource type="Texture2D" uid="uid://khj8r1p4qy0m" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka8.png" id="8_my2p0"]
+[ext_resource type="Texture2D" uid="uid://b8tijnpdljesw" path="res://assests/textures/Enemies/Ram/Baran_Kultist ataka9.png" id="9_1onok"]
+[ext_resource type="Texture2D" uid="uid://cn4h7pwifjimp" path="res://assests/textures/Enemies/Ram/Baran_Kultist AFK.png" id="10_ynna3"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_54mqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x3dke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qdlbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6cyxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ulllb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t7d3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vbc7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_my2p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1onok")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ynna3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]

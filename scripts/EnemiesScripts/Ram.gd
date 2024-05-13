@@ -14,6 +14,7 @@ var knockback = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var collision =  $Hitbox/CollisionShape2D
 @onready var attack_timer = $AttackTimer
+@onready var animatedsprite = $AnimatedSprite2D
 
 var line_of_sight = false
 @onready var los = $LineOfSight
@@ -45,6 +46,9 @@ func get_direction():
 func attack():
 	if $AttackDetector.has_overlapping_bodies():
 		player.hp-=DAMAGE
+		animatedsprite.play("Attack")
+	else:
+		animatedsprite.play("Idle")
 func flip():
 	if direction == Vector2.RIGHT:
 		transform.x.x = -1

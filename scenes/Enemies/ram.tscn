@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://du4va6kxvpldg"]
 
 [ext_resource type="Script" path="res://scripts/EnemiesScripts/Ram.gd" id="1_memxy"]
-[ext_resource type="Texture2D" uid="uid://cn4h7pwifjimp" path="res://assests/textures/Enemies/Ram/Baran_Kultist AFK.png" id="2_1jndc"]
+[ext_resource type="SpriteFrames" uid="uid://dkedmkjhf4er8" path="res://assests/textures/Enemies/Ram/Ram Attack.tres" id="2_lj64j"]
 [ext_resource type="PackedScene" uid="uid://ck4m84yrmg487" path="res://scenes/overlap/hitbox.tscn" id="3_1l2hn"]
 [ext_resource type="PackedScene" uid="uid://clttclpvxugvi" path="res://scenes/overlap/hurt_box.tscn" id="3_y65jl"]
 
@@ -28,9 +28,11 @@ collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_memxy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-19, -73)
-texture = ExtResource("2_1jndc")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-16, -75)
+sprite_frames = ExtResource("2_lj64j")
+animation = &"Idle"
+frame_progress = 0.263482
 
 [node name="RayCast2Dfor_floor" type="RayCast2D" parent="."]
 position = Vector2(-30, -28)
