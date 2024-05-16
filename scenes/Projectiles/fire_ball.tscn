@@ -1,8 +1,8 @@
 [gd_scene load_steps=65 format=3 uid="uid://brhkaqe5jwp6t"]
 
 [ext_resource type="PackedScene" uid="uid://ck4m84yrmg487" path="res://scenes/overlap/hitbox.tscn" id="1_q5mpa"]
+[ext_resource type="Script" path="res://scripts/fire_ball.gd" id="2_4xvnu"]
 [ext_resource type="Texture2D" uid="uid://dnuf5q7tverio" path="res://assests/textures/projectiles/1.png" id="2_ejp36"]
-[ext_resource type="Script" path="res://scenes/Projectiles/fire_ball.gd" id="2_ktxma"]
 [ext_resource type="Texture2D" uid="uid://cn53r6c7d3dc6" path="res://assests/textures/projectiles/2.png" id="3_i60rt"]
 [ext_resource type="Texture2D" uid="uid://bkyqo6ynewydw" path="res://assests/textures/projectiles/3.png" id="4_1vyn5"]
 [ext_resource type="Texture2D" uid="uid://c2ie5ll0b31oh" path="res://assests/textures/projectiles/4.png" id="5_akc78"]
@@ -258,7 +258,7 @@ animations = [{
 modulate = Color(1, 1, 1, 1)
 collision_layer = 8
 collision_mask = 5
-script = ExtResource("2_ktxma")
+script = ExtResource("2_4xvnu")
 speed = 650
 
 [node name="CollisionShape2D" parent="." index="0"]

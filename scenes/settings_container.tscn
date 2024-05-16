@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1rpq15a4mcki"]
 
 [ext_resource type="PackedScene" uid="uid://h4b3v3cewtui" path="res://scenes/hotkey_rebind_button.tscn" id="1_f6xy2"]
-[ext_resource type="Script" path="res://scenes/script_to_back.gd" id="2_wd6f8"]
+[ext_resource type="Script" path="res://scripts/script_to_back.gd" id="2_ogxn0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bf4k2"]
 
@@ -71,6 +71,6 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "Back
 "
-script = ExtResource("2_wd6f8")
+script = ExtResource("2_ogxn0")
 
 [connection signal="pressed" from="button_to_back" to="button_to_back" method="_on_pressed"]
