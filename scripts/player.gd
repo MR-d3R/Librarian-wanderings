@@ -16,7 +16,8 @@ var is_attacking = false
 
 func _physics_process(delta):
 	# Add the gravity.
-	print(hp)
+	if hp <= 0:
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		if velocity.y > MAX_VELOCITY:
@@ -46,17 +47,17 @@ func _physics_process(delta):
 	
 	update_animations(direction)
 	
-#func update_animations(direction):
-	#if is_on_floor():
-		#if direction == 0:
-			#ap.play("idle2")
-		#else:
-			#ap.play("walk")
-	#else:
-		#if velocity.y > 0:
-			#ap.play("jump")
-		#else:
-			#ap.play("fall")
+func update_animations(direction):
+	if is_on_floor():
+		if direction == 0:
+			ap.play("idle2")
+		else:
+			ap.play("walk")
+	else:
+		if velocity.y > 0:
+			ap.play("jump")
+		else:
+			ap.play("fall")
 
 func switch_direction(direction):
 	if direction == -1:

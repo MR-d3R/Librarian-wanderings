@@ -30,6 +30,8 @@ func _physics_process(delta):
 	attack()
 	move_and_slide()
 	knockback = lerp(knockback, Vector2.ZERO, 0.1)
+	if hp <= 0:
+		queue_free()
 	
 func get_direction():
 	player = get_parent().get_node("Player")
@@ -70,9 +72,10 @@ func _on_hurt_box_area_entered(area):
 	#var player_to_bullet = player.global_position.direction_to(area.global_position)
 	#var knockback = player_to_bullet * knockback_strength
 	#velocity -= knockback
-	var direction = global_position.direction_to(area.global_position)
+	direction = global_position.direction_to(area.global_position)
 	var explosion_force = direction * knockback_strength
 	knockback = explosion_force
 	
 	if area.is_in_group("Projectile"):
 		area.destroy()
+		hp-=20

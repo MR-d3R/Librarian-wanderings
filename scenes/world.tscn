@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c5o5xxmg2bysi" path="res://assests/textures/Background/3.png" id="8_pvkn5"]
 [ext_resource type="PackedScene" uid="uid://du4va6kxvpldg" path="res://scenes/Enemies/ram.tscn" id="8_tttmp"]
 [ext_resource type="Texture2D" uid="uid://r6o3x657fplo" path="res://assests/textures/Background/4.png" id="9_tif16"]
-[ext_resource type="PackedScene" uid="uid://c5ylxd8382icg" path="res://scenes/tile_map.tscn" id="10_sr200"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="10_sr200"]
 
 [node name="Level_1" type="Node2D"]
 process_mode = 1
