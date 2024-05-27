@@ -4,18 +4,22 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -400.0
 @export var MAX_HP = 10
 var hp = MAX_HP
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+signal hp_signal(hp)
+# et the gravity from the project settings to be synced with RigidBody nodes.
 @export var gravity = 1000
 @export var MAX_VELOCITY = 1000
 
 @onready var ap = $AnimatedSprite2D
 @onready var FireBall = preload("res://scenes/Projectiles/fire_ball.tscn") as PackedScene
 @onready var attack_timer = $AttackTimer
+
 var current_state = "idle2"
 var is_attacking = false
 
 func _physics_process(delta):
+	emit_signal("hp_signal", hp)
 	# Add the gravity.
+
 	if hp <= 0:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	if not is_on_floor():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4y7s4up2mbi0"]
+[gd_scene load_steps=11 format=3 uid="uid://c4y7s4up2mbi0"]
 
 [ext_resource type="PackedScene" uid="uid://dfgwbwjcvdar2" path="res://scenes/player.tscn" id="1_yqny1"]
 [ext_resource type="Texture2D" uid="uid://d062x1bv4xuvr" path="res://assests/textures/Background/0.png" id="5_thj2v"]
@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://c6p78hfo5e8n1" path="res://assests/textures/Background/2.png" id="7_jlqs1"]
 [ext_resource type="Texture2D" uid="uid://c5o5xxmg2bysi" path="res://assests/textures/Background/3.png" id="8_pvkn5"]
 [ext_resource type="PackedScene" uid="uid://du4va6kxvpldg" path="res://scenes/Enemies/ram.tscn" id="8_tttmp"]
+[ext_resource type="Script" path="res://scripts/Timer.gd" id="9_mletn"]
 [ext_resource type="Texture2D" uid="uid://r6o3x657fplo" path="res://assests/textures/Background/4.png" id="9_tif16"]
 [ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="10_sr200"]
+[ext_resource type="Script" path="res://scenes/HitPoints.gd" id="10_uyaaq"]
 
 [node name="Level_1" type="Node2D"]
 process_mode = 1
@@ -66,3 +68,54 @@ layer_0/tile_data = PackedInt32Array(3670032, 327680, 1, 3604496, 262144, 1, 353
 
 [node name="Ram" parent="." instance=ExtResource("8_tttmp")]
 position = Vector2(2821, 1161)
+
+[node name="Timer" type="Panel" parent="."]
+light_mask = 0
+offset_left = 2206.0
+offset_top = 652.0
+offset_right = 2246.0
+offset_bottom = 692.0
+scale = Vector2(3.306, 0.684781)
+script = ExtResource("9_mletn")
+
+[node name="Minutes" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 1.20992
+offset_top = 1.46032
+offset_right = 41.2099
+offset_bottom = 24.4603
+scale = Vector2(0.325532, 1.70095)
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 13.3091
+offset_top = 1.46032
+offset_right = 53.3091
+offset_bottom = 24.4603
+scale = Vector2(0.335924, 1.68115)
+text = "00:"
+horizontal_alignment = 2
+
+[node name="MSeconds" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 25.4083
+offset_top = 1.46032
+offset_right = 64.4083
+offset_bottom = 25.4603
+scale = Vector2(0.322447, 1.64254)
+text = "00"
+horizontal_alignment = 2
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 2368.0
+offset_top = 642.0
+offset_right = 2408.0
+offset_bottom = 682.0
+script = ExtResource("10_uyaaq")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
