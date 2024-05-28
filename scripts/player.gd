@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
-@export var MAX_HP = 10
+@export var MAX_HP = 100
 var hp = MAX_HP
 signal hp_signal(hp)
 # et the gravity from the project settings to be synced with RigidBody nodes.
