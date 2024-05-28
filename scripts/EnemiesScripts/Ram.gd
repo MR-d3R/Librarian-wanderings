@@ -5,7 +5,6 @@ extends CharacterBody2D
 var hp = MAX_HP
 
 var facin_right = true
-var player
 var direction = Vector2.RIGHT
 var knockback_strength = 32
 var knockback = Vector2.ZERO
@@ -15,6 +14,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var collision =  $Hitbox/CollisionShape2D
 @onready var attack_timer = $AttackTimer
 @onready var animatedsprite = $AnimatedSprite2D
+@onready var player = $"../Player"
 
 var line_of_sight = false
 @onready var los = $LineOfSight
@@ -34,7 +34,6 @@ func _physics_process(delta):
 		queue_free()
 	
 func get_direction():
-	player = get_parent().get_node("Player")
 	var player_pos = player.get_node("CollisionShape2D").global_position.x
 	var enemy_pos = collision.global_position.x
 	var flip_range = 50
