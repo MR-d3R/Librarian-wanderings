@@ -11,18 +11,40 @@ signal hp_signal(hp)
 
 @onready var ap = $AnimatedSprite2D
 @onready var FireBall = preload("res://scenes/Projectiles/fire_ball.tscn") as PackedScene
-@onready var attack_timer = $AttackTimer
+@onready var attack_timer = $betweenAttackTimer
+@onready var animation_attack_timer = $AttackTimer
+
+var knockback_strength = 16
+var knockback = Vector2.ZERO
+var direction_to = Vector2.RIGHT
 
 var current_state = "idle2"
 var is_attacking = false
 
+func _input(event):
+	if event.is_action_pressed("attack"):
+		if !is_attacking:
+			start_attack()
+
+func start_attack():
+	is_attacking = true
+	animation_attack_timer.start()
+	ap.play("attack")
+
+func _on_attack_timer_timeout():
+	is_attacking = false
+
 func _physics_process(delta):
 	emit_signal("hp_signal", hp)
 	# Add the gravity.
-
+	if is_attacking:
+		velocity = Vector2.ZERO
+	
 	if hp <= 0:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	if not is_on_floor():
+		if is_attacking:
+			velocity.y += gravity*10*delta
 		velocity.y += gravity * delta
 		if velocity.y > MAX_VELOCITY:
 			velocity.y = MAX_VELOCITY
@@ -35,10 +57,18 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
 	
-	if direction:
+	if direction and !is_attacking:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	#if knockback != Vector2.ZERO:
+		#velocity = SPEED * direction_to - knockback * knockback_strength
+		#knockback = lerp(knockback, Vector2.ZERO, 0.1)
+		#direction_to = lerp(knockback, Vector2.ZERO, 0.1)
+		#if direction:
+			#knockback=Vector2.ZERO
+		
 	
 	if direction != 0:
 		switch_direction(direction)
@@ -52,16 +82,17 @@ func _physics_process(delta):
 	update_animations(direction)
 	
 func update_animations(direction):
-	if is_on_floor():
-		if direction == 0:
-			ap.play("idle2")
+	if is_attacking == false:
+		if is_on_floor():
+			if direction == 0:
+				ap.play("idle2")
+			else:
+				ap.play("walk")
 		else:
-			ap.play("walk")
-	else:
-		if velocity.y > 0:
-			ap.play("jump")
-		else:
-			ap.play("fall")
+			if velocity.y > 0:
+				ap.play("jump")
+			else:
+				ap.play("fall")
 
 func switch_direction(direction):
 	if direction == -1:
@@ -79,3 +110,12 @@ func fireball_attack(fireball_direction: Vector2, xvelocity):
 		fireball.rotation = fireball_rotation
 		
 		attack_timer.start()
+
+
+#func _on_hurt_box_area_entered(area):
+	#var direction_to = global_position.direction_to(area.global_position)
+	#var explosion_force = direction_to * knockback_strength
+	#knockback = explosion_force
+	#direction_to = direction_to.normalized()
+	#knockback = knockback.normalized()
+

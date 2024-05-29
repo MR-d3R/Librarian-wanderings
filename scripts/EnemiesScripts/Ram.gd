@@ -50,6 +50,7 @@ func attack():
 		animatedsprite.play("Attack")
 	else:
 		animatedsprite.play("Idle")
+
 func flip():
 	if direction == Vector2.RIGHT:
 		transform.x.x = -1
@@ -67,10 +68,6 @@ func receive_damage(base_damage):
 	var actual_damage = base_damage
 
 func _on_hurt_box_area_entered(area):
-	receive_damage(area)
-	#var player_to_bullet = player.global_position.direction_to(area.global_position)
-	#var knockback = player_to_bullet * knockback_strength
-	#velocity -= knockback
 	direction = global_position.direction_to(area.global_position)
 	var explosion_force = direction * knockback_strength
 	knockback = explosion_force
