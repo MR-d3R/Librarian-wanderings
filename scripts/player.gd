@@ -11,6 +11,8 @@ signal hp_signal(hp)
 
 @onready var ap = $AnimatedSprite2D
 @onready var FireBall = preload("res://scenes/Projectiles/fire_ball.tscn") as PackedScene
+@onready var FireArrow = preload("res://scenes/Projectiles/arrow.tscn") as PackedScene
+@onready var ShadowSphere = preload("res://scenes/Projectiles/shadow_sphere.tscn") as PackedScene
 @onready var attack_timer = $betweenAttackTimer
 @onready var animation_attack_timer = $AttackTimer
 
@@ -44,7 +46,7 @@ func _physics_process(delta):
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	if not is_on_floor():
 		if is_attacking:
-			velocity.y += gravity*10*delta
+			velocity.y += gravity*15*delta
 		velocity.y += gravity * delta
 		if velocity.y > MAX_VELOCITY:
 			velocity.y = MAX_VELOCITY
@@ -74,8 +76,11 @@ func _physics_process(delta):
 		switch_direction(direction)
 		
 	if Input.is_action_just_pressed("attack") and attack_timer.is_stopped():
-		var fireball_direction = self.global_position.direction_to(get_global_mouse_position())
-		fireball_attack(fireball_direction, velocity.x)
+		var fireArrow_direction = self.global_position.direction_to(get_global_mouse_position())
+		fireArrow_attack(fireArrow_direction, velocity.x)
+	if Input.is_action_just_pressed("hard_attack") and attack_timer.is_stopped():
+		var shadowSphere_direction = self.global_position.direction_to(get_global_mouse_position())
+		shadowSphere_attack(shadowSphere_direction, velocity.x)
 
 	move_and_slide()
 	
@@ -100,14 +105,25 @@ func switch_direction(direction):
 	else:
 		transform.x.x = 1
 		
-func fireball_attack(fireball_direction: Vector2, xvelocity): 
+func fireArrow_attack(fireArrow_direction: Vector2, xvelocity): 
 	if FireBall:
-		var fireball = FireBall.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
-		get_tree().current_scene.add_child(fireball)
-		fireball.global_position = self.global_position
+		var fireArrow = FireArrow.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+		get_tree().current_scene.add_child(fireArrow)
+		fireArrow.global_position = self.global_position
 		
-		var fireball_rotation = fireball_direction.angle() 
-		fireball.rotation = fireball_rotation
+		var fireArrow_rotation = fireArrow_direction.angle() 
+		fireArrow.rotation = fireArrow_rotation
+		
+		attack_timer.start()
+
+func shadowSphere_attack(shadowSphere_direction: Vector2, xvelocity): 
+	if FireBall:
+		var shadowSphere = ShadowSphere.instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE)
+		get_tree().current_scene.add_child(shadowSphere)
+		shadowSphere.global_position = self.global_position
+		
+		var shadowSphere_rotation = shadowSphere_direction.angle() 
+		shadowSphere.rotation = shadowSphere_rotation
 		
 		attack_timer.start()
 

@@ -75,6 +75,9 @@ shape = SubResource("SegmentShape2D_23go0")
 wait_time = 0.664
 one_shot = true
 
+[node name="JumpTimer" type="Timer" parent="."]
+autostart = true
+
 [node name="LineOfSight" type="RayCast2D" parent="."]
 position = Vector2(-8, -88)
 target_position = Vector2(500, 0)
@@ -91,6 +94,7 @@ shape = SubResource("RectangleShape2D_dq4uu")
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]
 
 [editable path="HurtBox"]
 [editable path="Hitbox"]

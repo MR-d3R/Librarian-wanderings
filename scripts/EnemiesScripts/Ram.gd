@@ -2,6 +2,7 @@ extends CharacterBody2D
 @export var SPEED = 150
 @export var MAX_HP = 100
 @export var DAMAGE = 1
+@export var JUMP_VELOCITY = -200.0
 var hp = MAX_HP
 
 var facin_right = true
@@ -13,8 +14,10 @@ var knockback = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var collision =  $Hitbox/CollisionShape2D
 @onready var attack_timer = $AttackTimer
+@onready var jump_timer = $JumpTimer
 @onready var animatedsprite = $AnimatedSprite2D
 @onready var player = $"../Player"
+
 
 var line_of_sight = false
 @onready var los = $LineOfSight
@@ -75,3 +78,15 @@ func _on_hurt_box_area_entered(area):
 	if area.is_in_group("Projectile"):
 		area.destroy()
 		hp-=20
+
+
+func _on_jump_timer_timeout():
+		#var player_pos = player.get_node("CollisionShape2D").global_position.x
+		#var self_pos = collision.global_position.x
+	velocity.y += 50
+		#lerp(velocity.y, 100.0, 0.1)
+		#var jump_distance = (player_pos - self_pos).normalized()
+		#velocity = jump_distance
+		#print(jump_distance)
+		#velocity.x *= SPEED 
+		#velocity.y = JUMP_VELOCITY
